@@ -1,32 +1,48 @@
-<div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
-  <div class="col-md-6">
-    <!-- Sign-in form with Angular formGroup -->
-    <form [formGroup]="signinForm" (ngSubmit)="loginUser()" class="card p-4 shadow">
-      <h1 class="h3 mb-3 fw-normal text-center">Please sign in</h1>
+<section>
+  <div class="container-fluid">
+    <div class="row align-items-center justify-content- center">
+      <div class="sign-center justify-content-center d-flex">
+        <div class="w-35">
+          <!-- Sign-in form with Angular formGroup -->
+          <form [formGroup]="signinForm" (ngSubmit)="loginUser()" class=" p-4 form-box">
+            <div class="d-flex flex-column align-items-center">
+              <i class="pi pi-user mb-3" style="font-size:32px"></i>
+              <h1 class="h3 mb-4 fw-normal text-center">Sign In</h1>
+            </div>
 
-      <!-- Email input field -->
-      <div class="form-floating mb-3">
-        <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com" formControlName="email">
-        <label for="floatingInputEmail">Email address</label>
-        <!-- Email validation message -->
-        <div *ngIf="signinForm.get('email')?.invalid && signinForm.get('email')?.touched" class="text-danger">
-          Email is required
+
+            <!-- Email input field -->
+            <div class="form-floating mb-4">
+              <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com"
+                formControlName="email">
+              <label for="floatingInputEmail">Email address</label>
+              <!-- Email validation message -->
+              <div *ngIf="signinForm.get('email')?.invalid && signinForm.get('email')?.touched" class="text-danger">
+                Email is required
+              </div>
+            </div>
+
+            <!-- Password input field -->
+            <div class="form-floating mb-5">
+              <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                formControlName="password">
+              <label for="floatingPassword">Password</label>
+              <!-- Password validation message -->
+              <div *ngIf="signinForm.get('password')?.invalid && signinForm.get('password')?.touched"
+                class="text-danger">
+                Password is required
+              </div>
+            </div>
+
+            <!-- Sign-in button -->
+            <button class="btn btn-lg btn-outline-secondary w-100" type="submit">
+              <i class="pi pi-sign-in" style="font-size:18px"></i>
+              Sign in
+            </button>
+
+          </form>
         </div>
       </div>
-
-      <!-- Password input field -->
-      <div class="form-floating mb-3">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password" formControlName="password">
-        <label for="floatingPassword">Password</label>
-        <!-- Password validation message -->
-        <div *ngIf="signinForm.get('password')?.invalid && signinForm.get('password')?.touched" class="text-danger">
-          Password is required
-        </div>
-      </div>
-
-      <!-- Sign-in button -->
-      <button class="btn btn-lg btn-primary w-100" type="submit">Sign in</button>
-      
-    </form>
+    </div>
   </div>
-</div>
+</section>
