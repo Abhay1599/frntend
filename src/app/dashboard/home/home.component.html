@@ -1,7 +1,14 @@
+/********************************************************************************* 
+ * * ITE5315 – Project 
+ * * I declare that this assignment is my own work in accordance with Humber Academic Policy. 
+ * * No part of this assignment has been copied manually or electronically from any other source 
+ * * (including web sites) or distributed to other students. 
+ * * * Group member Name: ABHAY & Prarabdha Student IDs: N01581911 & N01578947 Date: 16th April 2024 
+ * *********************************************************************************/
 <section>
-  <div class="container-fluid p-5">
+  <div class="p-5 container-fluid">
     <div class="row justify-content-center align-items-center">
-      <div class="test-ptable px-0">
+      <div class="px-0 test-ptable">
         <p-table #dt [value]="movies" [resizableColumns]="false" [scrollable]="true" [paginator]="true"
           [rows]="request.rows" [first]="request.first" [lazy]="true" (onLazyLoad)="loadMovies($event)"
           [loading]="loading" [totalRecords]="totalRecords" [rowsPerPageOptions]="[5,10,50,100]" [autoLayout]="true"
@@ -9,7 +16,7 @@
           responsiveLayout="stack" [breakpoint]="'960px'" [rowHover]="true" dataKey="_id">
           <ng-template pTemplate="caption">
             <div class="flex d-flex justify-content-end">
-              <span class="p-input-icon-left ml-auto">
+              <span class="ml-auto p-input-icon-left">
                 <i class="pi pi-search"></i>
                 <input pInputText type="text" (input)="filterMoviesByTitle()" [(ngModel)]="globalFilter"
                   placeholder="Search Title" class="search-p" />

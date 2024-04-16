@@ -1,18 +1,25 @@
+/********************************************************************************* 
+ * * ITE5315 – Project 
+ * * I declare that this assignment is my own work in accordance with Humber Academic Policy. 
+ * * No part of this assignment has been copied manually or electronically from any other source 
+ * * (including web sites) or distributed to other students. 
+ * * * Group member Name: ABHAY & Prarabdha Student IDs: N01581911 & N01578947 Date: 16th April 2024 
+ * *********************************************************************************/
 <section>
   <div class="container-fluid">
-    <div class="row align-items-center justify-content- center">
+    <div class="row align-items-center justify-content- center">
       <div class="sign-center justify-content-center d-flex">
         <div class="w-35">
           <!-- Sign-in form with Angular formGroup -->
-          <form [formGroup]="signinForm" (ngSubmit)="loginUser()" class=" p-4 form-box">
+          <form [formGroup]="signinForm" (ngSubmit)="loginUser()" class="p-4  form-box">
             <div class="d-flex flex-column align-items-center">
-              <i class="pi pi-user mb-3" style="font-size:32px"></i>
-              <h1 class="h3 mb-4 fw-normal text-center">Sign In</h1>
+              <i class="mb-3 pi pi-user" style="font-size:32px"></i>
+              <h1 class="mb-4 text-center h3 fw-normal">Sign In</h1>
             </div>
 
 
             <!-- Email input field -->
-            <div class="form-floating mb-4">
+            <div class="mb-4 form-floating">
               <input type="email" class="form-control" id="floatingInputEmail" placeholder="name@example.com"
                 formControlName="email">
               <label for="floatingInputEmail">Email address</label>
@@ -23,7 +30,7 @@
             </div>
 
             <!-- Password input field -->
-            <div class="form-floating mb-5">
+            <div class="mb-5 form-floating">
               <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
                 formControlName="password">
               <label for="floatingPassword">Password</label>

@@ -1,16 +1,23 @@
+/********************************************************************************* 
+ * * ITE5315 – Project 
+ * * I declare that this assignment is my own work in accordance with Humber Academic Policy. 
+ * * No part of this assignment has been copied manually or electronically from any other source 
+ * * (including web sites) or distributed to other students. 
+ * * * Group member Name: ABHAY & Prarabdha Student IDs: N01581911 & N01578947 Date: 16th April 2024 
+ * *********************************************************************************/
 <section>
     <div class="container-fluid">
-        <div class="row align-items-center justify-content- center">
+        <div class="row align-items-center justify-content- center">
             <div class="sign-center justify-content-center d-flex">
                 <div class="w-35">
                     <!-- Registration form with formGroup Directive for Reactive Forms -->
                     <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="p-4 form-box">
-                        <h1 class="h3 mb-3 fw-normal text-center">
+                        <h1 class="mb-3 text-center h3 fw-normal">
                             Create an account and elevate your experience!
                         </h1>
 
                         <!-- Name Input -->
-                        <div class="form-floating mb-4">
+                        <div class="mb-4 form-floating">
                             <input type="text" class="form-control" id="nameInput" formControlName="name"
                                 placeholder="Name">
                             <label for="nameInput">Name</label>
@@ -22,7 +29,7 @@
                         </div>
 
                         <!-- Email Input -->
-                        <div class="form-floating mb-4">
+                        <div class="mb-4 form-floating">
                             <input type="email" class="form-control" id="emailInput" formControlName="email"
                                 placeholder="Email">
                             <label for="emailInput">Email</label>
@@ -34,7 +41,7 @@
                         </div>
 
                         <!-- Password Input -->
-                        <div class="form-floating mb-4">
+                        <div class="mb-4 form-floating">
                             <input type="password" class="form-control" id="passwordInput" formControlName="password"
                                 placeholder="Password">
                             <label for="passwordInput">Password</label>
@@ -46,7 +53,7 @@
                         </div>
 
                         <!-- Confirm Password Input -->
-                        <div class="form-floating mb-5">
+                        <div class="mb-5 form-floating">
                             <input type="password" class="form-control" id="confirmPasswordInput"
                                 formControlName="confirmPassword" placeholder="Confirm Password">
                             <label for="confirmPasswordInput">Confirm Password</label>
@@ -71,7 +78,7 @@
                         <!-- Login Redirect Link -->
                         <div class="mt-3 text-center">
                             <p class="mb-0 fw-light">Already have an account?
-                                <button type="button" (click)="navigate()" class="btn btn-secondary-outline btn-link link-dark  text-decoration-none">Log
+                                <button type="button" (click)="navigate()" class="btn btn-secondary-outline btn-link link-dark text-decoration-none">Log
                                     In</button>
                             </p>
                         </div>
