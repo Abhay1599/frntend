@@ -23,7 +23,8 @@ import { isPlatformBrowser } from "@angular/common";
 })
 export class AuthService {
   // endpoint: string = "http://localhost:3000"; // Base URL for the API.
-  endpoint: string = "https://nice-pink-bonobo-wear.cyclic.app";
+  // endpoint: string = "https://nice-pink-bonobo-wear.cyclic.app";
+  endpoint: string = "https://project-1-f5bs.onrender.com/";
   
   headers = new HttpHeaders().set("Content-Type", "application/json"); // Default HTTP headers for requests.
   private authStatus = new BehaviorSubject<boolean>(false);
